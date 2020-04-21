@@ -1,0 +1,8 @@
+pip install --user virtualenv
+virtualenv -p python3 venv
+source venv/bin/activate
+pip install apache-beam[gcp]
+pip install apache-beam[interactive]
+python -m pip install ipykernel
+python -m ipykernel install --user --name beam_venv_kernel --display-name "Python (beam_venv)"
+jupyter kernelspec list
